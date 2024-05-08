@@ -21,7 +21,6 @@
 <h3>Создать новый client</h3>
 <form action="/client/create" method="post">
     Название объявления: <input type="text" name="name"/><br><br>
-
     balans: <input type="number" name="name"/><br><br>
     <input type="submit" value="Добавить"/>
 </form>

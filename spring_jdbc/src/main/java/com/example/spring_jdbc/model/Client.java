@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
 @Entity
-@Table(name = "clients")
+@Table(name = "client")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
