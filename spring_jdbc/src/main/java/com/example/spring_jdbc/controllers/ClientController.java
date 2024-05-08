@@ -2,18 +2,17 @@ package com.example.spring_jdbc.controllers;
 
 import com.example.spring_jdbc.model.Client;
 import com.example.spring_jdbc.services.ClientService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+@Controller
+@RequiredArgsConstructor
 public class ClientController {
     private final ClientService clientService;
-
-    public ClientController(ClientService clientService) {
-        this.clientService = clientService;
-    }
 
     @GetMapping("/")
     public String client(@RequestParam(name = "name", required = false) String name, Model model) {
