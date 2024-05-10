@@ -35,9 +35,14 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-jdbc</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<groupId> com.h2database </groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.200</version>
 		</dependency>
     </dependencies>
 

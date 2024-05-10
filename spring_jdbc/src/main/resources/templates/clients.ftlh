@@ -5,9 +5,9 @@
 </head>
 <body>
 <h1>BUYSELL</h1><hr>
-<h4>Товары со всей России</h4>
+<h4>Client</h4>
 <form action="/" method="get">
-    Поиск по названию объявления: <input type="text" name="name"><br>
+    Поиск: <input type="text" name="name321"><br>
     <input type="submit" value="Поиск"/>
 </form>
 <#list clients as client>
@@ -18,9 +18,9 @@
     <h3>Client hti no</h3>
 </#list>
 <hr>
-<h3>Создать новый client</h3>
+<h3>criet new client</h3>
 <form action="/client/create" method="post">
-    Название объявления: <input type="text" name="name"/><br><br>
+    name: <input type="text" name="name"/><br><br>
     balans: <input type="number" name="name"/><br><br>
     <input type="submit" value="Добавить"/>
 </form>
