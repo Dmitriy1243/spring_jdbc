@@ -17,21 +17,26 @@ public class ClientController {
     private final ClientRepository clientRepository;
 
     @RequestMapping("/")
-    public List<Client> getClient() {
-        return clientRepository.findAll();
+    public List<Client> clients () {
+        return clientService.getClient();
     }
+
 //    public String client(@RequestParam(name = "name", required = false) String name) {
 //        clientService.listClients(name);
 //        return "name";
 //    }
 
-    @RequestMapping("/client/{id}")
-    public String clientInfo(@PathVariable Long id) {
-        clientService.getClientById(id);
-        return "client-info";
+//    @RequestMapping("/clients/{id}")
+//    public String clientInfo(@PathVariable Long id) {
+//        clientService.getClientById(id);
+//        return "client-info";
+//    }
+    @RequestMapping("/clients/{id}")
+    public String clientInfo (@PathVariable long id) {
+        return String.valueOf(clientService.getClientById(id));
     }
 
-    @PostMapping("/client/create")
+    @PostMapping("/clients/create")
     public String createClient(Client client) {
         clientService.saveClient(client);
         return "redirect:/";

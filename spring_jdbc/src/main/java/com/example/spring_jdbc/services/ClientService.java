@@ -5,6 +5,7 @@ import com.example.spring_jdbc.model.Client;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -14,8 +15,12 @@ import java.util.List;
 public class ClientService {
     private final ClientRepository ClientRepository;
 
-    public List<Client> listClients(String name) {
-        if (name != null) return ClientRepository.findByName(name);
+//    public List<Client> listClients (String name)   {
+////        if (name != null) return ClientRepository.findByName(name);
+////        return ClientRepository.findAll();
+////    }
+@RequestMapping("/")
+    public List<Client> getClient() {
         return ClientRepository.findAll();
     }
 
@@ -29,6 +34,7 @@ public class ClientService {
     }
 
     public Client getClientById(Long id) {
+
         return ClientRepository.findById(id).orElse(null);
     }
 }

@@ -7,7 +7,7 @@
 <h1>BUYSELL</h1><hr>
 <h4>Client</h4>
 <form action="/" method="get">
-    Поиск: <input type="text" name="name321"><br>
+    Поиск: <input type="text" name="name"><br>
     <input type="submit" value="Поиск"/>
 </form>
 <#list clients as client>
@@ -19,7 +19,7 @@
 </#list>
 <hr>
 <h3>criet new client</h3>
-<form action="/client/create" method="post">
+<form action="/clients/create" method="post">
     name: <input type="text" name="name"/><br><br>
     balans: <input type="number" name="name"/><br><br>
     <input type="submit" value="Добавить"/>
